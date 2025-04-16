@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(37, 74, 116, 0.7);
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+header {
+    background: url('../img/background.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 20px;
+    min-height: 20vh; /* Укажите желаемую высоту */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Центрирование контента */
+    align-items: center;
+}
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    background: #218838;
+}
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+/* дополнение */
+.page {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0px;
+    flex-wrap: wrap; /* если хотите, чтобы на узких экранах элементы переходили в колонку */
+    margin: 0px;
+}
+.main-content {
+    flex: 2; /* Основной контент занимает 2/3 ширины */
+    min-width: 300px;
+}
+
+.feedback-form {
+    flex: 1; /* Форма занимает 1/3 ширины */
+    min-width: 250px;
+}
+ /* таблица */
+.prices-table {
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    width: 100%;
+    margin: 40px 0;
+    border-collapse: collapse;
+    background-color: #f3f3f3;
+    color: #7b7b7b;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+.prices-table th {
+    text-align: left;
+    background-color: #002b5d;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-right: 1px solid #dbdbdb;
+}
+.prices-table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+}
+td span:first-child {
+    color: #444444;
+}
+
+td span:not(:first-child) {
+    color: #8e8e8e;
+}
+/* форма */
+.feedback-form {
+    flex: 0 0 50%;      /* занимает половину ширины родителя */
+    max-width: 500px;   /* ограничивает максимальную ширину */
+  }
+  
+  .feedback-form iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+  }
+/* Адаптация формы */
+@media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+    .feedback-form {
+      width: 100%;
+    }
+  }
+ /* адаптация */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+}
