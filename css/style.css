@@ -38,26 +38,9 @@ header {
     justify-content: center; /* Центрирование контента */
     align-items: center;
 }
-.contacts {
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-}
 .container {
     max-width: 800px;
     margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 3px;
-    box-shadow: 0 0 2px rgba(29, 29, 58, 0.1);
-}
-.container2 {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0px;
-}
-#about {
-    margin: 0 auto 20px auto; 
     padding: 20px;
     background: white;
     border-radius: 3px;
@@ -92,41 +75,18 @@ input, textarea {
     border-radius: 5px;
     width: 100%;
 }
-.telegram-link {
-    color: #002b5d;
-    text-decoration: underline;
-  }
-  
-.telegram-link:hover {
-    color: #000000;
-    text-decoration: none;
-  }
-/* дополнение */
 .page {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 20px;
-    flex-wrap: wrap; /* если хотите, чтобы на узких экранах элементы переходили в колонку */
+    flex-wrap: wrap; 
     margin: 0px;
 }
 .main-content {
-    flex: 2; /* Основной контент занимает 2/3 ширины */
+    flex: 2; 
     min-width: 300px;
-}
-
-.feedback-form {
-    flex: 1;
-    min-width: 250px;
-    transition: position 0.3s ease, top 0.3s ease; /* Плавное появление при фиксировании */
-}
-
-.fixed-feedback-form {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
  /* таблица */
 .prices-table {
@@ -161,17 +121,6 @@ td span:first-child {
 td span:not(:first-child) {
     color: #8e8e8e;
 }
-/* форма */
-.feedback-form {
-    flex: 0 0 50%;      /* занимает половину ширины родителя */
-    max-width: 500px;   /* ограничивает максимальную ширину */
-  }
-  
-  .feedback-form iframe {
-    width: 100%;
-    height: 600px;
-    border: none;
-  }
 /* Адаптация формы */
 @media (max-width: 768px) {
     .content-wrapper {
@@ -191,7 +140,7 @@ td span:not(:first-child) {
 /* Левый блок */
 #left {
     flex: 1;
-    max-width: 350px;
+    max-width: 450px;
 }
 ul {
     list-style: none; /* Убираем стандартные маркеры */
@@ -214,14 +163,72 @@ h2 {
 
 .layout-wrapper {
     display: flex;
-    justify-content: space-between;   /* Отступ между блоками */
+    justify-content: center;   /* Отступ между блоками */
     align-items: center;              /* Центрирует по вертикали */
     gap: 20px;                        /* Расстояние между блоками */
     padding: 0px;                    /* Отступы от краёв */
     box-sizing: border-box;           /* Чтобы padding учитывался в общей ширине */
     height: 100%;                     /* Растягивает на всю высоту */
-    max-width: 1200px;                /* Максимальная ширина контейнера */
+    max-width: 1400px;                /* Максимальная ширина контейнера */
     margin: 0 auto;                   /* Центрирует блок по горизонтали */
+}
+#about {
+    margin: 0 auto 20px auto; 
+    padding: 20px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(29, 29, 58, 0.1);
+}
+.container2 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0px;
+}
+/* Контакты */
+.container3 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #002b5d;
+    color: white;
+}
+.telegram-link {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+.telegram-link:hover {
+    color: #ff0000;
+    text-decoration: none;
+  }
+  .contacts-h {
+    background-color: #002b5d; /* синий фон */
+    color: white;              /* белый текст */
+    text-align: center;        /* по центру */
+    margin: 0;                 /* убираем лишние отступы */
+    padding: 0px;             /* как у .contacts */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+/* Кнопка */
+.btn-cta {
+    display: inline-block;
+    background-color: #be1f30;
+    color: white;
+    font-weight: bold;
+    padding: 24px 48px;          /* Увеличенные отступы сразу */
+    font-size: 1.5em;            /* Увеличенный текст сразу */
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: #a21829;   /* Только изменение цвета */
+}
+.button-wrapper {
+    text-align: center;
+    margin-top: 30px;
 }
 /* *  Страница формы */ 
 #form-page {
