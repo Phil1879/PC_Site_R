@@ -138,7 +138,7 @@ td span:not(:first-child) {
     }
 }
 /* Левый блок */
-#left {
+#right-s {
     flex: 1;
     max-width: 450px;
 }
@@ -191,6 +191,7 @@ h2 {
     padding: 20px;
     background-color: #002b5d;
     color: white;
+    transition: all 0.3s;
 }
 .telegram-link {
     color: #ffffff;
@@ -202,34 +203,84 @@ h2 {
     text-decoration: none;
   }
   .contacts-h {
-    background-color: #002b5d; /* синий фон */
-    color: white;              /* белый текст */
-    text-align: center;        /* по центру */
-    margin: 0;                 /* убираем лишние отступы */
-    padding: 0px;             /* как у .contacts */
+    background-color: #002b5d; 
+    color: white;              
+    text-align: center;        
+    margin: 0;                 
+    padding: 0px;             
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
+.sticky {
+    position: fixed;
+    top: 20px; /* Это значение можно адаптировать, если необходимо */
+    z-index: 9999;
+    margin: 0;
+    padding: 20px;
+    background-color: #002b5d;
+    width: 800px; /* Примерно равный ширине элемента */
+    left: 20px; /* Позиция слева для соответствия */
+}
 /* Кнопка */
 .btn-cta {
+    position: relative;
     display: inline-block;
     background-color: #be1f30;
     color: white;
     font-weight: bold;
-    padding: 24px 48px;          /* Увеличенные отступы сразу */
-    font-size: 1.5em;            /* Увеличенный текст сразу */
+    padding: 18px 36px; 
+    font-size: 1.125em;
     text-decoration: none;
     border-radius: 6px;
+    z-index: 1;
     transition: background-color 0.3s ease;
+    overflow: visible; /* важно: волны за пределами кнопки */
 }
 
-.btn-cta:hover {
-    background-color: #a21829;   /* Только изменение цвета */
+/* Анимация волн */
+.btn-cta::before,
+.btn-cta::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: -1; /* волна под кнопкой */
+    animation: wave-rect 2.5s infinite;
 }
-.button-wrapper {
-    text-align: center;
-    margin-top: 30px;
+
+.btn-cta::after {
+    animation-delay: 1.25s;
 }
+
+/* Анимация прямоугольной волны */
+@keyframes wave-rect {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2.5); /* волна расширяется наружу */
+        opacity: 0;
+    }
+}
+.btn-cta .wave-extra {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    z-index: -1;
+    animation: wave-rect 2.5s infinite;
+    animation-delay: 2s;
+}
+
 /* *  Страница формы */ 
 #form-page {
     background-color: #f4f4f4;
