@@ -117,8 +117,16 @@ input, textarea {
 }
 
 .feedback-form {
-    flex: 1; /* Форма занимает 1/3 ширины */
+    flex: 1;
     min-width: 250px;
+    transition: position 0.3s ease, top 0.3s ease; /* Плавное появление при фиксировании */
+}
+
+.fixed-feedback-form {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
  /* таблица */
 .prices-table {
@@ -185,9 +193,18 @@ td span:not(:first-child) {
     flex: 1;
     max-width: 350px;
 }
+ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding-left: 0;  /* Можно скорректировать отступы при необходимости */
+}
+
 li {
     color: #444444;
     text-align: left;
+    background: url("../icons/ок.svg") no-repeat left center;
+    background-size: 18px 18px; /* размер галочки */
+    padding-left: 28px; /* отступ слева для текста, чтобы не налезал на иконку */
+    margin-bottom: 8px; /* немного расстояния между пунктами (по желанию) */
 }
 h3 { 
     color: #444444;
@@ -205,4 +222,45 @@ h2 {
     height: 100%;                     /* Растягивает на всю высоту */
     max-width: 1200px;                /* Максимальная ширина контейнера */
     margin: 0 auto;                   /* Центрирует блок по горизонтали */
+}
+/* *  Страница формы */ 
+#form-page {
+    background-color: #f4f4f4;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#form-page input, #form-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#form-page button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#form-page button:hover {
+    background-color: #45a049;
+}
+
+.required {
+    color: red; /* Красный цвет для звездочки */
+    font-weight: bold;
+    margin-right: 10px; /* Отступ между звездочкой и полем */
+}
+
+.form-group {
+    display: flex; /* Используем flexbox для выравнивания */
+    align-items: center; /* Центрируем по вертикали */
+    margin-bottom: 10px; /* Отступ между элементами формы */
 }
