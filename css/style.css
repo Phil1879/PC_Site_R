@@ -193,6 +193,9 @@ h2 {
     color: white;
     transition: all 0.3s;
 }
+.phone {
+    font-size: 1.5em;
+}
 .telegram-link {
     color: #ffffff;
     text-decoration: underline;
@@ -210,6 +213,7 @@ h2 {
     padding: 0px;             
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    font-size: 2em;
 }
 .sticky {
     position: fixed;
@@ -218,7 +222,7 @@ h2 {
     margin: 0;
     padding: 20px;
     background-color: #002b5d;
-    width: 800px; /* Примерно равный ширине элемента */
+    width: 375px; /* Примерно равный ширине элемента */
     left: 20px; /* Позиция слева для соответствия */
 }
 /* Кнопка */
@@ -234,7 +238,9 @@ h2 {
     border-radius: 6px;
     z-index: 1;
     transition: background-color 0.3s ease;
-    overflow: visible; /* важно: волны за пределами кнопки */
+    overflow: visible; 
+    margin-top: 25px; /* Добавляем отступ сверху */
+    margin-bottom: 25px; /* Добавляем отступ снизу */
 }
 
 /* Анимация волн */
@@ -248,7 +254,7 @@ h2 {
     height: 100%;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.15);
-    z-index: -1; /* волна под кнопкой */
+    z-index: 1; 
     animation: wave-rect 2.5s infinite;
 }
 
@@ -276,7 +282,7 @@ h2 {
     height: 100%;
     border-radius: 6px;
     background: rgba(255, 255, 255, 0.15);
-    z-index: -1;
+    z-index: 1;
     animation: wave-rect 2.5s infinite;
     animation-delay: 2s;
 }

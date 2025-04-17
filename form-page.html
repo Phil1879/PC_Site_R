@@ -10,7 +10,7 @@
     <div id="form-page">
         <h2>Заполните форму для подачи заявки</h2>
         <p><i>Поля, отмеченные звездочкой, обязательны для заполнения</i></p>
-        <form>
+        <form class="contact-form" id="contact-form">
             <div class="form-group">
                 <span class="required">*</span>
                 <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
@@ -37,14 +37,11 @@
         </form>
     </div>
     
-
-<script>
-    document.getElementById("repair-form").addEventListener("submit", function(event) {
-        event.preventDefault(); // Предотвращаем отправку формы
-        alert("Ваша заявка отправлена!");
-        // Здесь можно добавить код для отправки формы на сервер или почту
-    });
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
+<script src="js/form.js"></script>
 
 </body>
 </html>
