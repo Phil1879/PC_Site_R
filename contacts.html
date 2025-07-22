@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Реабілітаційний центр для наркозалежних</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Центр <span class="accent-text">Джерело</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about" data-lang="uk">Про нас</a>
+                        <a class="nav-link" href="index.html#about" data-lang="ru" style="display:none;">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#reviews" data-lang="uk">Відгуки</a>
+                        <a class="nav-link" href="index.html#reviews" data-lang="ru" style="display:none;">Отзывы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacts.html" data-lang="uk">Контакти</a>
+                        <a class="nav-link active" href="contacts.html" data-lang="ru" style="display:none;">Контакты</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="language-switcher btn btn-outline-light" id="languageSwitcher">UA</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Контакты -->
+    <section class="py-5 mt-5" id="contact">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h2 class="fw-bold mb-4" data-lang="uk">Наші <span class="accent-text">контакти</span></h2>
+                    <h2 class="fw-bold mb-4" data-lang="ru" style="display:none;">Наши <span class="accent-text">контакты</span></h2>
+                    
+                    <div class="mb-4">
+                        <h5 data-lang="uk"><i class="bi bi-geo-alt-fill accent-text me-2"></i> Адреса</h5>
+                        <h5 data-lang="ru" style="display:none;"><i class="bi bi-geo-alt-fill accent-text me-2"></i> Адрес</h5>
+                        <p data-lang="uk">Київська обл., Васильківський район, село Погреби, вулиця Космічна 8а.</p>
+                        <p data-lang="ru" style="display:none;">Киевская обл., Васильковский район, село Погребы, улица Космическая 8а.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="bi bi-telephone-fill accent-text me-2"></i> Телефон</h5>
+                        <p>+38 (099) 258-74-84</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="bi bi-envelope-fill accent-text me-2"></i> Email</h5>
+                        <p>ninarkotikam.ukr@gmail.com</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5 data-lang="uk"><i class="bi bi-clock-fill accent-text me-2"></i> Години роботи</h5>
+                        <h5 data-lang="ru" style="display:none;"><i class="bi bi-clock-fill accent-text me-2"></i> Часы работы</h5>
+                        <p data-lang="uk">Цілодобово, 7 днів на тиждень</p>
+                        <p data-lang="ru" style="display:none;">Круглосуточно, 7 дней в неделю</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <h4 class="mb-4" data-lang="uk">Залишити <span class="accent-text">заявку</span></h4>
+                        <h4 class="mb-4" data-lang="ru" style="display:none;">Оставить <span class="accent-text">заявку</span></h4>
+                        
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Ім'я" data-lang="uk" required>
+                                <input type="text" class="form-control" placeholder="Имя" data-lang="ru" style="display:none;" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Телефон" required>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="4" placeholder="Повідомлення" data-lang="uk" required></textarea>
+                                <textarea class="form-control" rows="4" placeholder="Сообщение" data-lang="ru" style="display:none;" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-accent w-100" data-lang="uk">Надіслати</button>
+                            <button type="submit" class="btn btn-accent w-100" data-lang="ru" style="display:none;">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3">Центр<span class="accent-text">Джерело</span></h5>
+                    <p data-lang="uk">Професійна допомога наркозалежним</p>
+                    <p data-lang="ru" style="display:none;">Профессиональная помощь наркозависимым</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5 class="mb-3" data-lang="uk">Швидкі посилання</h5>
+                    <h5 class="mb-3" data-lang="ru" style="display:none;">Быстрые ссылки</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#about" class="text-decoration-none text-light" data-lang="uk">Про нас</a></li>
+                        <li><a href="index.html#about" class="text-decoration-none text-light" data-lang="ru" style="display:none;">О нас</a></li>
+                                                <li><a href="contacts.html" class="text-decoration-none text-light" data-lang="uk">Контакти</a></li>
+                        <li><a href="contacts.html" class="text-decoration-none text-light" data-lang="ru" style="display:none;">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3" data-lang="uk">Соціальні мережі</h5>
+                    <h5 class="mb-3" data-lang="ru" style="display:none;">Социальные сети</h5>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="https://www.instagram.com/djerelo.help/" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="https://t.me/ninarkotikam_bot" class="text-light"><i class="bi bi-telegram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <p class="mb-0" data-lang="uk">&copy; 2025 Центр Джерело. Всі права захищені.</p>
+            <p class="mb-0" data-lang="ru" style="display:none;">&copy; 2025 Центр Джерело. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
