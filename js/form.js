@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // ===== Инициализация EmailJS =====
-  emailjs.init('Hue36AWB2l7-XtbtA'); // Замените на свой public key
-  
-  // ===== Обработка формы =====
   const contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
@@ -10,10 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
       e.preventDefault(); // Предотвращаем перезагрузку страницы
 
       emailjs.sendForm(
-        'service_cx72h8j',        // Замените на свой service ID
-        'template_sod10ag',       // Замените на свой template ID
+        'service_g8mlnuh',        // Замените на свой service ID
+        'template_z6p1pyq',       // Замените на свой template ID
         contactForm,              // Передаем саму форму
-        'Hue36AWB2l7-XtbtA'       // Замените на свой public key
+        'q-Lu0XZi-EpE_dtR0'       // Замените на свой public key
       ).then(
         () => {
           showAlert(
