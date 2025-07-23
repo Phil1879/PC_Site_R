@@ -3,17 +3,38 @@ document.addEventListener('DOMContentLoaded', function() {
     const languageSwitcher = document.getElementById('languageSwitcher');
     let currentLanguage = 'uk';
     
+    // Заменяем этот блок полностью на новый обработчик:
     languageSwitcher.addEventListener('click', function() {
         if (currentLanguage === 'uk') {
             // Переключаем на русский
-            document.querySelectorAll('[data-lang="ru"]').forEach(el => el.style.display = '');
-            document.querySelectorAll('[data-lang="uk"]').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('[data-lang="ru"]').forEach(el => {
+                el.style.display = '';
+                if (el.matches('input, textarea')) {
+                    el.setAttribute('required', 'required');
+                }
+            });
+            document.querySelectorAll('[data-lang="uk"]').forEach(el => {
+                el.style.display = 'none';
+                if (el.matches('input, textarea')) {
+                    el.removeAttribute('required');
+                }
+            });
             languageSwitcher.textContent = 'ru';
             currentLanguage = 'ru';
         } else {
             // Переключаем на украинский
-            document.querySelectorAll('[data-lang="uk"]').forEach(el => el.style.display = '');
-            document.querySelectorAll('[data-lang="ru"]').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('[data-lang="uk"]').forEach(el => {
+                el.style.display = '';
+                if (el.matches('input, textarea')) {
+                    el.setAttribute('required', 'required');
+                }
+            });
+            document.querySelectorAll('[data-lang="ru"]').forEach(el => {
+                el.style.display = 'none';
+                if (el.matches('input, textarea')) {
+                    el.removeAttribute('required');
+                }
+            });
             languageSwitcher.textContent = 'UA';
             currentLanguage = 'uk';
         }
