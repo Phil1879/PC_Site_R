@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const contactForm = document.getElementById('contactForm');
+  let contactForm = document.getElementById('contactForm');
   
   if (contactForm) {
-    const sendEmail = (e) => {
+    let sendEmail = (e) => {
       e.preventDefault(); // Предотвращаем перезагрузку страницы
 
       emailjs.sendForm(
         'service_g8mlnuh',        // Замените на свой service ID
         'template_z6p1pyq',       // Замените на свой template ID
-        contactForm,              // Передаем саму форму
+        '#contactForm',              // Передаем саму форму
         'q-Lu0XZi-EpE_dtR0'       // Замените на свой public key
       ).then(
         () => {
